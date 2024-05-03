@@ -6,6 +6,8 @@ Created on Fri Apr 26 10:18:38 2024
 """
 
 import matplotlib.pyplot as plt
+import time
+
 
 #Fibonacci Number F(n) = F(n-1) + F(n-2)-----bottom_up(dynamic-programming-like)
 
@@ -50,7 +52,14 @@ def f_bottom_up_list(n):
     return f_bottom_up_list_
 
 
+start_time = time.time()
 a = f_bottom_up_list(number)
+end_time = time.time()
+
+#計算程式執行時間
+execution_time = end_time - start_time
+print("程式執行時間：", execution_time, "秒")
+
 r = list(range(0, number+1))
 
 

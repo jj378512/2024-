@@ -8,6 +8,7 @@ Created on Fri Apr 26 15:05:29 2024
 #Fibonacci Number F(n) = F(n-1) + F(n-2)-----top_down(divide and conqure/ pure recursive)
 
 import matplotlib.pyplot as plt
+import time
 
 #設定F(n)的n
 number = int(input('輸入F(n)之n：'))
@@ -38,7 +39,15 @@ def f_bottom_up_list(n):
         
     return f_top_down_list_
 
+
+start_time = time.time()
 a = f_bottom_up_list(number)
+end_time = time.time()
+
+#計算程式執行時間
+execution_time = end_time - start_time
+print("程式執行時間：", execution_time, "秒")
+
 r = list(range(5, number+1))
 
 
