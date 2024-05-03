@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import time
 
 #設定F(n)的n
-number = int(input('輸入F(n)之n：'))
+number = 20
 
 
 def f_top_down(n):
@@ -44,5 +44,5 @@ plt.figure(dpi = 300)
 plt.plot(r, a, 'r')   # red line without marker
 plt.title('Fibonacci Number F(n), top_down', fontsize = 15) 
 plt.xlabel('n', fontsize = 15)
-plt.ylabel('Nunber of F(4)', fontsize = 15)
+plt.ylabel('F(n)', fontsize = 15)
 plt.show()

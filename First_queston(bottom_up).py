@@ -13,7 +13,7 @@ import time
 
 
 #設定F(n)的n
-number = int(input('輸入F(n)之n：'))
+number = 100
 
 #計算F(n) = F(n-1) + F(n-2) 之 F(n)
 def f_bottom_up(n):
