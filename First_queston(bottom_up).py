@@ -45,21 +45,24 @@ a = f_bottom_up_list_
 #將F(n)做成list
 def f_bottom_up_list(n):
     
-    f_bottom_up_list_ = []
+    f_bottom_up_list_time = []
     for i in range(0, n+1):
-        f_bottom_up_list_.append(f_bottom_up(i))
+        start_time = time.time()
+        Kernel = f_bottom_up(i)
+        end_time = time.time()
         
-    return f_bottom_up_list_
+        #計算程式執行時間
+        execution_time = end_time - start_time
+        
+        f_bottom_up_list_time.append(execution_time)
+        
+        print("程式執行時間：", execution_time, "秒")
+        
+    return f_bottom_up_list_time
 
 
-start_time = time.time()
+
 b = f_bottom_up_list(number)
-end_time = time.time()
-
-#計算程式執行時間
-execution_time = end_time - start_time
-print("程式執行時間：", execution_time, "秒")
-
 r = list(range(0, number+1))
 
 

@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import time
 
 #設定F(n)的n
-number = 20
+number = 100
 
 
 def f_top_down(n):
@@ -22,21 +22,24 @@ def f_top_down(n):
 
 def f_top_down_list(n):
     
-    f_top_down_list_ = []
+    f_top_down_list_time = []
     for i in range(0, n+1):
-        f_top_down_list_.append(f_top_down(i))
+        start_time = time.time()
+        Kernel = f_top_down(i)
+        end_time = time.time()
         
-    return f_top_down_list_
+        #計算程式執行時間
+        execution_time = end_time - start_time
+        
+        f_top_down_list_time.append(execution_time)
+        
+        print("程式執行時間：", execution_time, "秒")
+        
+    return f_top_down_list_time
 
 
-start_time = time.time()
+
 a = f_top_down_list(number)
-end_time = time.time()
-
-#計算程式執行時間
-execution_time = end_time - start_time
-print("程式執行時間：", execution_time, "秒")
-
 r = list(range(0, number+1))
 
 
