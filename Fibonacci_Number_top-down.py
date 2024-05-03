@@ -31,7 +31,7 @@ def f_top_down(n):
     else:
         return f_top_down(n-1) + f_top_down(n-2)
 
-def f_bottom_up_list(n):
+def f_top_down_list(n):
     
     f_top_down_list_ = []
     for i in range(5, n+1):
@@ -41,7 +41,7 @@ def f_bottom_up_list(n):
 
 
 start_time = time.time()
-a = f_bottom_up_list(number)
+a = f_top_down_list(number)
 end_time = time.time()
 
 #計算程式執行時間
